@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error-Filled Page</title>
+</head>
+    
+<body>
+    <h1>Welcome to My Error-Filled Page</h1>
+    
+    <p>This is a paragraph with mismatched tags and missing closing tags.</p>
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+    </ol>
+
+    <p>This is another paragraph without proper indentation.</p>
+    
+    <img src="image.jpg"/>
+
+    <a href="https://www.example.com" target="_blank">Click me!</a>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>30</td>
+        </tr>
+    </table>
+    
+    <img src="error.jpeg" alt="Error Image">
+
+    <div style="text-align: center;">
+        This is centered text.
+      </div>      
+
+    <p style="background-color: lightgray;">Text</p>
+
+    <input type="button" value="Click me">
+
+    <!-- This is an unclosed comment -->
+
+    <a href="#">Link without closing tag</a>
+
+    <p><u>Underlined text</u></p>
+
+    <dl>
+        <dt>Descriptive Item Title</dt>
+        <dd>Descriptive Item Text</dd>
+      </dl>
+      
+    <ol>
+        <li>Error: Missing <!DOCTYPE html>
+            The Correction: Add <!DOCTYPE html> before <html lang=”en”>
+        </li>
+        <li>Error: Missing the metas
+            Theorrection: Add...
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </li>
+        <li>Error: <html language="en">
+            Correction: Remove the extra <html> tag.
+        </li>
+        <li><html language="en">
+            Correction: Use <html lang="en"> for specifying the language and move before <head>.
+        </li>
+        <li>Error: <title>Error-Filled Page</title> 
+            Correction: The <title> element is used within the <head> of an HTML doc and the head should have a closing. It should not be placed outside of the <head> section.
+            Ensure that the <title> element is within the <head> section, and the rest of your page content is placed within the <body> section.
+        </li>
+        <li>Error: <head>
+            Correction: Add a closing </head> tag after <title> element.
+        </li>
+        <li>Error: <h1>Welcome to My Error-Filled Page
+            Correction: Close the <h1> tag with </h1>.
+        </li>
+        <li>Error: This is a paragraph with mismatched tags and missing closing tags.</p>
+            Correction: Add a <p> tag to close the </p>.
+        </li>
+        <li>Error: <ul> and </ul>
+            Correction: Change </ul> to </ol> to close the ordered list.
+        </li>
+        <li>Error: <p>This is another paragraph without proper indentation.
+            Correction: Close the <p> tag with </p>.
+        </li>
+        <li>Error: <img src="image.jpg"> 
+            Correction: Close the image tag properly (<img src="image.jpg" />) 
+        </li>
+        <li>Error: <a href="https://www.example.com" target="_blank">Click me!</img>
+            Correction: Change the closing tag for the anchor (</a>).
+        </li>
+        <li>Error: <td>John</td> and <td>25<td>
+            Correction: Close the second <td> tag properly (<td>25</td>).
+        </li>
+        <li>Error: no closing tag for <table>
+            Correction: Close <table> tag with </table>
+        </li>
+        <li>Error: Specifying the image source is src, not source (<img source="error.jpeg" alt="Error Image">)
+            Correction: Change source to src (<img src="error.jpeg" alt="Error Image">).
+        </li>
+        <li>Error: The <center> element is not supported in HTML
+            Correction: use CSS to center text or other elements
+            <div style="text-align: center;"> This is centered text. </div>
+        </li>
+        Error: The bgcolor attribute is not used with the <p> element <pbgcolor="lightgray">Text</p>
+        Correction:  <p style="background-color: lightgray;">Text</p>
+        </li>
+        <li>Error: <!-- This is an unclosed comment
+            Correction: Add --> to close the comment.
+        </li>
+        <li>Error: <a href="#">Link without closing tag
+            Correction: Close the anchor tag properly (<a href="#">Link without closing tag</a>).
+        </li>
+        <li>Error: The code has incorrect <em> element which would italicize not underline (<p><em>Underlined text</p></em>)
+            Correction: The correct answer would be <p><u>Underlined text</u></p>.
+        </li>
+        <li>The <dl> element should only contain <dt> and <dd> elements as direct children. The <li> element is not valid inside a <dl>. 
+            Correction: 
+            <dl>
+              <dt>Descriptive Item Title</dt>
+              <dd>Descriptive Item Text</dd>
+            </dl>
+        </li>
+    </ol>
+</body>
+</html>
+
