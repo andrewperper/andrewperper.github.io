@@ -1,0 +1,69 @@
+/* General page styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Card container styles */
+.card {
+    width: 300px;
+    background-color: #FF5733; /* Reddish color, you can change this */
+    border: 2px solid #333;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header styles */
+.card-header {
+    background: linear-gradient(to bottom, #333, #666); /* Darker to lighter gradient */
+    border-radius: 15px 15px 0 0;
+    padding: 10px;
+    text-align: center;
+    color: #fff; /* Light color for better readability */
+}
+
+/* Content styles */
+.card-content {
+    height: 120px; /* Expressed in ems */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 10px;
+}
+
+/* Footer styles */
+.card-footer {
+    background: linear-gradient(to top, #666, #333); /* Lighter to darker gradient */
+    border-radius: 0 0 15px 15px;
+    padding: 10px;
+    text-align: center;
+    color: #fff; /* Light color for better readability */
+}
+
+/* Image styles */
+.card-content img {
+    float: right;
+    max-height: 100%;
+}
+
+/* Additional rulesets */
+/* Total height of header and footer in ems */
+.card-header, .card-footer {
+    height: 3em; /* 30px including padding of 10px on all sides */
+}
+
+/* Remove default margin from h2 and p elements */
+h2, p {
+    margin: 0;
+}
+
+/* Styling for h2 in header */
+.card-header h2 {
+    font-size: 20px; /* Expressed in ems */
+    line-height: 30px; /* Centering h2 in the 30px content box */
+}
+
+/* Styling for p in footer */
+.card-footer p {
+    font-size: 15px; /* Expressed in ems */
+    line-height: 30px; /* Centering p in the 30px content box */
+}
