@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    background: #ccc;
+  }
+  
+  article {
+    width: 210mm;
+    height: 297mm;
+    margin: 20px auto;
+    position: relative;
+    background: white; /* Add white background color */
+    border: 1mm solid #333; /* Add 1mm solid border with a color in keeping with the color scheme */
+  }
+  
+  address {
+    position: absolute;
+    bottom: 8mm;
+    right: 20mm;
+  }
+  
+  h1 {
+    position: absolute;
+    top: 12mm;
+    left: 20mm;
+    width: 128px;
+    height: 128px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 44px 0;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    background-size: contain; /* Ensure the logo is contained within the h1 element */
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5)); /* Add a subtle drop shadow to the logo */
+  }
+  
+  /* Gradient overlay for the top and bottom images */
+  article::before,
+  article::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50px; /* Adjust the height as needed */
+  }
+
+  article{
+    border-top: 1 mm solid red;
+    border-bottom: 1mm solid red;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,0.2)), url(../img/top-img.png) no-repeat left top, url(../img/bottom-img.png) no-repeat left bottom;
+
+    background-color: white;
+
+  }
+  
+  article::after {
+    bottom: 0;
+    top: auto;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent); /* Semi-transparent gradient at the bottom */
+  }
+
+  h1{
+    background: url(../img/logo-img.png)
+  }
