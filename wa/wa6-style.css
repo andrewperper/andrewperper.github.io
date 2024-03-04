@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url("../img/football.cu,webp");
+    background-image: url("../img/harryp.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -13,24 +13,59 @@ body {
     display: inline-block;
 }
 
-.score-overlay,
-.info-overlay {
+#Overlay {
+    position: relative;
+    display: inline-block;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+}
+
+.score-overlay {
     position: absolute;
-    top: 10px;
+    bottom: 20px; /* Adjust the bottom value to lift it up more */
     left: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
     border-radius: 5px;
 }
 
-.info-overlay {
-    top: 60px; /* Adjust the position of the second overlay */
+.overlay-image {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Additional styling for overlays if needed */
-.score-overlay p,
+.Teams {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: auto;
+    text-align: left;
+}
+
+.score-overlay p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.info-overlay {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .info-overlay p {
     margin: 0;
     font-size: 16px;
 }
+
+
 

@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="wa6-style.css">
     <title>Overlay Example</title>
 </head>
 <body>
     <div class="image-container">
-        <img src="../img/harryp.jpg" alt="Your Image" class="background-image">
-        <div class="score-overlay">
-            <!-- Content for score overlay -->
-            <p>Team A: 3</p>
-            <p>Team B: 2</p>
+        <div id="Overlay">
+            <img src="../img/harryp.jpg" alt="Your Image" class="background-image">
+            <div class="score-overlay">
+                <!-- Content for score overlay -->
+                <p>House Points A: <span id="housePointsA">42</span></p>
+                <p>House Points B: <span id="housePointsB">37</span></p>
+            </div>
+            <div class="info-overlay">
+                <div id="Overlay">
+                    <img src="../img/scoreboard.png" alt="Another Image" class="overlay-image">
+                    <div class="Teams">
+                        <!-- Content for informational overlay -->
+                        <p>Score!:</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="info-overlay">
-            <!-- Content for informational overlay -->
-            <p>Now on Sale!</p>
-            <p>Limited Stock</p>
-        </div>
-        <img src="../img/scoreboard.png" alt="Another Image" class="overlay-image">
     </div>
 </body>
-</html>
+
