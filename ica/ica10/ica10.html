@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICA 10 - Interactive Elements</title>
+<script src="ica10.js"></script>
+<style>
+  .button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .button:hover {
+    background-color: #0056b3;
+  }
+  .text {
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<button id="button1" class="button">Change Text AND Make Backdrop Blue</button>
+<p id="textElement" class="text">Original Text</p>
+
+<button id="button2" class="button">Change Background to Yellow</button>
+<div id="backgroundElement" style="width: 200px; height: 200px; background-color: #f0f0f0;"></div>
+
+<script>
+  // Event listener for button1 to change text
+  document.getElementById("button1").addEventListener("click", function() {
+    document.getElementById("textElement").textContent = "New Text";
+    function changeText(){
+        
+    }
+  });
+
+  // Event listener for button2 to change background color
+  document.getElementById("button2").addEventListener("click", function() {
+    document.getElementById("backgroundElement").style.backgroundColor = "#ffcc00";
+  });
+</script>
+
+</body>
+</html>
