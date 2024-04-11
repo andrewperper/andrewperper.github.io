@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assignment11.css">
+    <title>Harry Potter Quote Machine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: blue;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: darkcyan;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #quote {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #author {
+            font-style: italic;
+        }
+        button {
+            background-color: lightblue;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+ 
+<body>
+    <div class="container">
+        <h1>Harry Potter Quote Machine</h1>
+        <div id="quote"></div>
+        <div id="author"></div>
+        <button id="get-quote-button" onclick="getQuote()">Get Quote</button>
+        <img id="loading-gif" src="loading.gif" style="display: none;">
+        <div id="loading-bar"></div>
+    </div>
+    <img id="hp-image" src="hp.jpg">
+    <script>
+        async function getQuote() {
+            const loadingGif = document.getElementById('loading-gif');
+            const loadingBar = document.getElementById('loading-bar');
+            loadingGif.style.display = 'block';
+            loadingBar.style.width = '0%';
+
+            try {
+                // Simulate a delay for the loading animation
+                await new Promise(resolve => setTimeout(resolve, 2000));
+
+                loadingBar.style.width = '100%';
+
+                const response = await fetch('https://wizard-world-api.herokuapp.com/Elixirs');
+                
+                const data = await response.json();
+                console.log(data[100]["name"]);
+                let quoteText = `${data[100]["name"]}`;
+
+                // Inject random Harry Potter easter eggs
+                const easterEggs = ['Pheonix Feather', 'Eye of Newt', 'Scabbers Brain', 'Frogs Wart', 'Witches Finger'];
+                const randomIndex = Math.floor(Math.random() * easterEggs.length);
+                const easterEgg = easterEggs[randomIndex];
+                quoteText += ` (${easterEgg})`;
+
+                document.getElementById('quote').textContent = quoteText;
+                document.getElementById('author').textContent = `- ${data[100]["name"]}`;
+            } catch (error) {
+                console.error('Error fetching quote:', error);
+            } finally {
+                loadingGif.style.display = 'none';
+                loadingBar.style.width = '0%';
+            }
+        }
+        
+
+        // Adjust the loading bar width to match the button size
+        const button = document.getElementById('get-quote-button');
+        const loadingBar = document.getElementById('loading-bar');
+        loadingBar.style.width = `${button.offsetWidth}px`;
+    </script>
+</body>
+</html>
