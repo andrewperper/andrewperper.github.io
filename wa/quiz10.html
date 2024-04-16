@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8"/>
+    <title>JSON: Task 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #673ab7;
+            text-align: center;
+        }
+
+        p {
+            color: #333;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #673ab7;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #512da8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Meet the Cats</h1>
+    <div id="mother-info"></div>
+    <div id="kitten-info"></div>
+    <button id="load-button">Load Cat Information</button>
+</div>
+
+<script>
+    const motherInfoDiv = document.getElementById('mother-info');
+    const kittenInfoDiv = document.getElementById('kitten-info');
+    const loadButton = document.getElementById('load-button');
+
+    const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
+
+    loadButton.addEventListener('click', () => {
+        fetch(requestURL)
+            .then(response => response.json())
+            .then(data => displayCatInfo(data))
+            .catch(error => console.error('Error fetching cat information:', error));
+    });
+
+    function displayCatInfo(catData) {
+        let motherInfo = 'The mother cats are called ';
+        let kittenInfo = 'Total kittens: ';
+
+        let total = 0;
+        let male = 0;
+
+        catData.forEach((cat, index) => {
+            motherInfo += cat.name;
+            if (index < catData.length - 1) {
+                motherInfo += ', ';
+            } else {
+                motherInfo += '.';
+            }
+            total += cat.kittens.length;
+            cat.kittens.forEach(kitten => {
+                if (kitten.gender === 'm') {
+                    male++;
+                }
+            });
+        });
+
+        kittenInfo += `${total} (Male: ${male}, Female: ${total - male})`;
+
+        motherInfoDiv.textContent = motherInfo;
+        kittenInfoDiv.textContent = kittenInfo;
+    }
+</script>
+
+</body>
+</html>
