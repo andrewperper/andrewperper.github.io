@@ -1,0 +1,57 @@
+.volume-container {
+    width: 340px;
+    height: 180px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    border: 2px solid #ccc; /* Adding border */
+}
+
+.volume-bar {
+    width: 280px;
+    height: 20px;
+    background-color: #ddd;
+    position: relative;
+}
+
+.volume-handle {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    cursor: pointer;
+}
+
+.volume-img {
+    width: 250px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image is centered */
+    margin: 0 auto; /* Center horizontally */
+    border: 5px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    padding: 5px; /* Add padding around the image */
+}
+
+
+.volume-text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.change-color-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
